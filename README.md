@@ -33,9 +33,9 @@
 ***
 ## 🎮 Quick start
 
-| Post | Source code | Title |
-| :-:  |   :-:       | ---   |
-| [🔗 Blogpost](https://medium.com/think-do-tank) | [📁](https://github.com/dyne/blog-code-samples/tree/master/zencode-javascript-series/part-1-nodejs) | Make 💏 with Zencode and Javascript - Part 1 Zencode in nodejs |
+| Blog post | Source code | Title |
+| :-:       |   :-:       | ---   |
+| [🔗](https://medium.com/think-do-tank) | [📁](https://github.com/dyne/blog-code-samples/tree/master/zencode-javascript-series/part-1-nodejs) | Make 💏 with Zencode and Javascript - Part 1 Zencode in nodejs |
 
 
 ***
@@ -65,7 +65,7 @@ If you find an error a typo or some errata corrige
 6.  🙏 Thank you
 
 
-**[🔝 back to top](#toc)**
+**[🔝 back to top](#---quick-start-------acknowledgements-------links-------contributing-------license)**
 
 ***
 ## 💼 License
@@ -76,4 +76,4 @@ If you find an error a typo or some errata corrige
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
-**[🔝 back to top](#toc)**
+**[🔝 back to top](#---quick-start-------acknowledgements-------links-------contributing-------license)**
