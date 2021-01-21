@@ -1,0 +1,13 @@
+{
+  "name": "part-1-nodejs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Puria Nafisi Azizi",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "devDependencies": {
+    "zenroom": "^2.1.0"
+  }
+}

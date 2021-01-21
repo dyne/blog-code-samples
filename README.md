@@ -1,18 +1,15 @@
 <p align="center">
   <a href="https://www.dyne.org">
-    <img alt="{project_name}" src="https://via.placeholder.com/150.png?text=LOGO" width="150" />
+    <img alt="Code sample blog Dyne.org" src="https://www.dyne.org/wp-content/uploads/2015/08/cafudda.jpg" width="150" />
   </a>
 </p>
 
 <h1 align="center">
-  {project_name}</br>
-  <sub>{tagline}</sub>
+  Think & Do thank code samples</br>
+  <sub>We share code for freedom. Our code samples used in our blog posts</sub>
 </h1>
 
 <p align="center">
-  <a href="https://travis-ci.com/DECODEproject/{project_name}">
-    <img src="https://travis-ci.com/DECODEproject/{project_name}.svg?branch=master" alt="Build Status">
-  </a>
   <a href="https://dyne.org">
     <img src="https://img.shields.io/badge/%3C%2F%3E%20with%20%E2%9D%A4%20by-Dyne.org-blue.svg" alt="Dyne.org">
   </a>
@@ -21,19 +18,7 @@
 <br><br>
 
 <h4 align="center">
-  <a href="#-install">💾 Install</a>
-  <span> • </span>
   <a href="#-quick-start">🎮 Quick start</a>
-  <span> • </span>
-  <a href="#-docker">🐋 Docker</a>
-  <span> • </span>
-  <a href="#-api">🐝 API</a>
-  <span> • </span>
-  <a href="#-configuration">🔧 Configuration</a>
-  <span> • </span>
-  <a href="#-testing">📋 Testing</a>
-  <span> • </span>
-  <a href="#-troubleshooting--debugging">🐛 Troubleshooting & debugging</a>
   <span> • </span>
   <a href="#-acknowledgements">😍 Acknowledgements</a>
   <span> • </span>
@@ -45,82 +30,32 @@
 </h4>
 
 
-Abstract description like: 🚧 Zenroom is a software in **ALPHA stage** and are part of the [DECODE project](https://decodeproject.eu) about data-ownership and [technological sovereignty](https://www.youtube.com/watch?v=RvBRbwBm_nQ). Our effort is that of improving people's awareness of how their data is processed by algorithms, as well facilitate the work of developers to create along [privacy by design principles](https://decodeproject.eu/publications/privacy-design-strategies-decode-architecture) using algorithms that can be deployed in any situation without any change.
-
-
-<details id="toc">
- <summary><strong>🚩 Table of Contents</strong> (click to expand)</summary>
-
-* [Install](#-install)
-* [Quick start](#-quick-start)
-* [Docker](#-docker)
-* [API](#-api)
-* [Configuration](#-configuration)
-* [Testing](#-testing)
-* [Troubleshooting & debugging](#-troubleshooting--debugging)
-* [Acknowledgements](#-acknowledgements)
-* [Links](#-links)
-* [Contributing](#-contributing)
-* [License](#-license)
-</details>
-
-***
-## 💾 Install
-```pip install / yard add {project_name}```
-
-
 ***
 ## 🎮 Quick start
 
-To start using {project_name} just (fill with real documentation)
+| Post | Source code | Title |
+| :-:  |   :-:       | ---   |
+| [🔗 Blogpost](https://medium.com/think-do-tank) | [📁](https://github.com/dyne/blog-code-samples/tree/master/zencode-javascript-series/part-1-nodejs) | Make 💏 with Zencode and Javascript - Part 1 Zencode in nodejs |
 
-***
-## 🐋 Docker
-
-```bash
-docker build -t {project_name} .
-docker run --rm -it {project_name}
-```
-
-***
-## 🐝 API
-
-***
-## 🔧 Configuration
-
-***
-
-## 📋 Testing
-
-***
-## 🐛 Troubleshooting & debugging
 
 ***
 ## 😍 Acknowledgements
 
-Copyright © 2019 by [Dyne.org](https://www.dyne.org) foundation, Amsterdam
+Copyright © 2021 by [Dyne.org](https://www.dyne.org) foundation, Amsterdam
 
-Designed, written and maintained by Puria Nafisi Azizi.
-
-Special thanks to Mr. W. White for his special contributions.
-
-<img src="https://zenroom.dyne.org/img/ec_logo.png" width="150" alt="Project funded by the European Commission">
-
-This project is receiving funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement nr. 732546 (DECODE).
-
+Designed, written and maintained by Dyne.org
 
 ***
 ## 🌐 Links
 
-https://www.somelink.io/
+https://medium.com/think-do-tank
 
 https://dyne.org/
 
 
 ***
 ## 👤 Contributing
-
-Please first take a look at the [Dyne.org - Contributor License Agreement](CONTRIBUTING.md) then
+If you find an error a typo or some errata corrige
 
 1.  🔀 [FORK IT](../../fork)
 2.  Create your feature branch `git checkout -b feature/branch`
@@ -134,20 +69,11 @@ Please first take a look at the [Dyne.org - Contributor License Agreement](CONTR
 
 ***
 ## 💼 License
-    {project_name} - {tagline}
-    Copyright (c) 2019 Dyne.org foundation, Amsterdam
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU Affero General Public License as
-    published by the Free Software Foundation, either version 3 of the
-    License, or (at your option) any later version.
+    Unless otherwise noted, all the code here is in the public domain
+    (see the LICENSE files in subfolders for more details).
 
     This program is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU Affero General Public License for more details.
-
-    You should have received a copy of the GNU Affero General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
 **[🔝 back to top](#toc)**
