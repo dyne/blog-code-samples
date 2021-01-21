@@ -35,7 +35,7 @@
 
 | Blog post | Source code | Title |
 | :-:       |   :-:       | ---   |
-| [🔗](https://medium.com/think-do-tank/make-with-zencode-and-javascript-aka-easy-crypto-and-human-readable-smart-contracts-in-js-14067d91e8f1) | [📁](https://github.com/dyne/blog-code-samples/tree/master/zencode-javascript-series/part-1-nodejs) | Make 💏 with Zencode and Javascript - Part 1 Zencode in nodejs |
+| [🔗](https://medium.com/think-do-tank/make-with-zencode-and-javascript-aka-easy-crypto-and-human-readable-smart-contracts-in-js-14067d91e8f1?source=friends_link&sk=cb94c71f9087f4ef3229f58b436ab500) | [📁](https://github.com/dyne/blog-code-samples/tree/master/zencode-javascript-series/part-1-nodejs) | Make 💏 with Zencode and Javascript - Part 1 Zencode in nodejs |
 
 
 ***
