@@ -14,8 +14,8 @@
       const conf = "memmanager=lw";
 
       window.encrypt = () => {
-        const password = document.getElementById('encryptPassword').value
-        const message = document.getElementById('plainMessage').value
+        const password = document.getElementById("encryptPassword").value;
+        const message = document.getElementById("plainMessage").value;
         const keys = JSON.stringify({ password });
         const data = JSON.stringify({ message });
         const contract = `Scenario 'ecdh': Encrypt a message with a password/secret 
@@ -23,36 +23,40 @@
           and that I have a 'string' named 'message' 
           When I encrypt the secret message 'message' with 'password' 
           Then print the 'secret message'`;
-        zencode_exec(contract, { data, keys, conf }).then(({result}) => {
-          const rel = document.getElementById('encrypted')
-          rel.value = result
-          rel.classList.add("is-success");
-        }).catch(({logs}) => {
-          const rel = document.getElementById('encrypted')
-          rel.value = logs
-          rel.classList.add("is-danger");  
-        })
+        zencode_exec(contract, { data, keys, conf })
+          .then(({ result }) => {
+            const rel = document.getElementById("encrypted");
+            rel.value = result;
+            rel.classList.add("is-success");
+          })
+          .catch(({ logs }) => {
+            const rel = document.getElementById("encrypted");
+            rel.value = logs;
+            rel.classList.add("is-danger");
+          });
       };
 
       window.decrypt = () => {
-        const password = document.getElementById('decryptPassword').value;
+        const password = document.getElementById("decryptPassword").value;
         const keys = JSON.stringify({ password });
-        const data = document.getElementById('encryptedMessage').value;
+        const data = document.getElementById("encryptedMessage").value;
         const contract = `Scenario 'ecdh': Decrypt the message with the password 
           Given that I have a valid 'secret message' 
           Given that I have a 'string' named 'password' 
           When I decrypt the text of 'secret message' with 'password' 
           Then print the 'text' as 'string'`;
-        zencode_exec(contract, { data, keys, conf }).then(({result}) => {
-          const decrypted = JSON.parse(result).text;
-          const rel = document.getElementById('decrypted')
-          rel.value = decrypted
-          rel.classList.add("is-success");
-        }).catch(({logs}) => {
-          const rel = document.getElementById('decrypted')
-          rel.value = logs
-          rel.classList.add("is-danger");  
-        });
+        zencode_exec(contract, { data, keys, conf })
+          .then(({ result }) => {
+            const decrypted = JSON.parse(result).text;
+            const rel = document.getElementById("decrypted");
+            rel.value = decrypted;
+            rel.classList.add("is-success");
+          })
+          .catch(({ logs }) => {
+            const rel = document.getElementById("decrypted");
+            rel.value = logs;
+            rel.classList.add("is-danger");
+          });
       };
     </script>
   </head>
@@ -75,10 +79,17 @@
 
             <div class="field is-grouped">
               <div class="control">
-                  <input class="input" type="password" placeholder="password" id="encryptPassword">
+                <input
+                  class="input"
+                  type="password"
+                  placeholder="password"
+                  id="encryptPassword"
+                />
               </div>
               <div class="control">
-                <button class="button is-primary" onClick="encrypt()">🔐 Encrypt</button>
+                <button class="button is-primary" onClick="encrypt()">
+                  🔐 Encrypt
+                </button>
               </div>
             </div>
           </div>
@@ -91,7 +102,6 @@
                 readonly
               ></textarea>
             </div>
-          </div>
           </div>
         </div>
       </div>
@@ -114,10 +124,17 @@
 
             <div class="field is-grouped">
               <div class="control">
-                  <input class="input" type="password" placeholder="password" id="decryptPassword">
+                <input
+                  class="input"
+                  type="password"
+                  placeholder="password"
+                  id="decryptPassword"
+                />
               </div>
               <div class="control">
-                <button class="button is-primary" onClick="decrypt()">🔓 Decrypt</button>
+                <button class="button is-primary" onClick="decrypt()">
+                  🔓 Decrypt
+                </button>
               </div>
             </div>
           </div>
@@ -130,7 +147,6 @@
                 readonly
               ></textarea>
             </div>
-          </div>
           </div>
         </div>
       </div>
