@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Encrypt/Decrypt online</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
+    />
+    <script type="module">
+      import { zencode_exec } from "https://jspm.dev/zenroom@next";
+
+      const conf = "memmanager=lw";
+
+      window.encrypt = () => {
+        const password = document.getElementById('encryptPassword').value
+        const message = document.getElementById('plainMessage').value
+        const keys = JSON.stringify({ password });
+        const data = JSON.stringify({ message });
+        const contract = `Scenario 'ecdh': Encrypt a message with a password/secret 
+          Given that I have a 'string' named 'password' 
+          and that I have a 'string' named 'message' 
+          When I encrypt the secret message 'message' with 'password' 
+          Then print the 'secret message'`;
+        zencode_exec(contract, { data, keys, conf }).then(({result}) => {
+          const rel = document.getElementById('encrypted')
+          rel.value = result
+          rel.classList.add("is-success");
+        }).catch(({logs}) => {
+          const rel = document.getElementById('encrypted')
+          rel.value = logs
+          rel.classList.add("is-danger");  
+        })
+      };
+
+      window.decrypt = () => {
+        const password = document.getElementById('decryptPassword').value;
+        const keys = JSON.stringify({ password });
+        const data = document.getElementById('encryptedMessage').value;
+        const contract = `Scenario 'ecdh': Decrypt the message with the password 
+          Given that I have a valid 'secret message' 
+          Given that I have a 'string' named 'password' 
+          When I decrypt the text of 'secret message' with 'password' 
+          Then print the 'text' as 'string'`;
+        zencode_exec(contract, { data, keys, conf }).then(({result}) => {
+          const decrypted = JSON.parse(result).text;
+          const rel = document.getElementById('decrypted')
+          rel.value = decrypted
+          rel.classList.add("is-success");
+        }).catch(({logs}) => {
+          const rel = document.getElementById('decrypted')
+          rel.value = logs
+          rel.classList.add("is-danger");  
+        });
+      };
+    </script>
+  </head>
+  <body>
+    <section class="section">
+      <div class="container">
+        <h1 class="title">ECDH encrypt</h1>
+        <div class="columns">
+          <div class="column is-one-third">
+            <div class="field">
+              <label class="label">Message</label>
+              <div class="control">
+                <textarea
+                  id="plainMessage"
+                  class="textarea"
+                  placeholder="Message to encrypt"
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="field is-grouped">
+              <div class="control">
+                  <input class="input" type="password" placeholder="password" id="encryptPassword">
+              </div>
+              <div class="control">
+                <button class="button is-primary" onClick="encrypt()">🔐 Encrypt</button>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <label class="label">Result</label>
+            <div class="control">
+              <textarea
+                id="encrypted"
+                class="textarea is-family-monospace"
+                readonly
+              ></textarea>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <h1 class="title">ECDH decrypt</h1>
+        <div class="columns">
+          <div class="column">
+            <div class="field">
+              <label class="label">Encrypted message</label>
+              <div class="control">
+                <textarea
+                  id="encryptedMessage"
+                  class="textarea"
+                  placeholder="Message to decrypt"
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="field is-grouped">
+              <div class="control">
+                  <input class="input" type="password" placeholder="password" id="decryptPassword">
+              </div>
+              <div class="control">
+                <button class="button is-primary" onClick="decrypt()">🔓 Decrypt</button>
+              </div>
+            </div>
+          </div>
+          <div class="column is-one-third">
+            <label class="label">Result</label>
+            <div class="control">
+              <textarea
+                id="decrypted"
+                class="textarea is-family-monospace"
+                readonly
+              ></textarea>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
