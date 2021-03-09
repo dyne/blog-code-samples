@@ -1,3 +1,9 @@
+# :rocket: Launch
+`yarn start`
+
+# :anchor: Blogpost
+This code referes to [this blogpost](https://medium.com/think-do-tank/make-with-zencode-and-javascript-aka-easy-crypto-and-human-readable-smart-contracts-in-react-pt-ec91be04fd4d?source=friends_link&sk=03659bbce3df3afacc378864e44c4df9)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
